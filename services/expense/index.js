@@ -7,6 +7,22 @@ const expense_service = {
     getAll() {
         return expenses
     },
+    getById(id) {
+        return expenses.find(exp => exp.id == id)
+    },
+    update(id, updateData){
+        const expenseIndex = expenses.findIndex(exp => exp.id == id)
+
+        if (expenseIndex === -1) {
+            return null
+        }
+
+        expenses[expenseIndex].expense = { ...expenses[expenseIndex].expense, ...updateData }
+
+        writeToFile(expenses)
+
+        return expenses[expenseIndex]
+    },
     create(req, res) {
         let new_id = genRandId(4)
                 
@@ -22,13 +38,18 @@ const expense_service = {
         writeToFile(expenses)
         
         return new_expense
+    },
+    delete(id) {
+        const index = expenses.findIndex(u => u.id == id)
+        expenses.splice(index, 1)    
+        writeToFile(expenses)
     }
 }
 // create function for overwriting the db file updated db content
 let writeToFile = async (users) => {
     await 
         fs.writeFileSync(
-            global.mock_db,
+            global.expense_db,
             JSON.stringify(
                 users, null, 4
             ),

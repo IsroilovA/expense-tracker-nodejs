@@ -1,3 +1,5 @@
+const expense_service = require("../../../services/expense");
+
 //home controoller
 const home_controller = {
     index: async (req, res) =>{
@@ -8,7 +10,8 @@ const home_controller = {
         res.render('home/add_update');
     },
     update: async (req, res) =>{
-        res.render('home/add_update');
+        const eventData = await expense_service.getById(req.params.id);
+        res.render('home/add_update', { mode: 'Update', eventData: eventData });
     }
 };
   

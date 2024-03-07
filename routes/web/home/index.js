@@ -10,5 +10,8 @@ router.get('/add', home_controller.add);
 //update existing expense
 router.get('/update', home_controller.update);
 
+router.get('/update/:id', home_controller.update);
+
+
 
 module.exports = router;

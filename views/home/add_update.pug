@@ -1,18 +1,19 @@
 //- variable to store categories
-- var expenseCategories = [{text: 'Groceries', value: 'groceries'}, {text: 'Utilities', value: 'utilities'}, {text: 'Transportation', value: 'transportation'}, {text: 'Healthcare', value: 'healthcare'}, {text: 'Entertainment', value: 'entertainment'}, {text: 'Dining Out', value: 'dining_out'}, {text: 'Education', value: 'education'}, {text: 'Gifts/Donations', value: 'gifts_donations'}, {text: 'Personal Spending', value: 'personal_spending'}, {text: 'Miscellaneous', value: 'miscellaneous'}]
-
+//- var expenseCategories = [{text: 'Groceries', value: 'groceries'}, {text: 'Utilities', value: 'utilities'}, {text: 'Transportation', value: 'transportation'}, {text: 'Healthcare', value: 'healthcare'}, {text: 'Entertainment', value: 'entertainment'}, {text: 'Dining Out', value: 'dining_out'}, {text: 'Education', value: 'education'}, {text: 'Gifts/Donations', value: 'gifts_donations'}, {text: 'Personal Spending', value: 'personal_spending'}, {text: 'Miscellaneous', value: 'miscellaneous'}]
+- var expenseCategories = ['Groceries', 'Utilities', 'Transportation', 'Healthcare', 'Entertainment','Dining Out', 'Education', 'Gifts/Donations', 'Personal Spending', 'Miscellaneous']
 include ../head.pug
 body
     .container.mt-5
-      h1 Add/Update Expense
+      h1 #{mode}
       form(action="/submit-expense-form" method="POST")
         //- category
         .mb-3
           label(for="category" class="form-label") Category
           select(class="form-select" id="category" name="category" required)
-            option(disabled selected) Select the Category
+            option(disabled selected value="") Select the Category
             each category in expenseCategories
-                option(value=category.value) #{category.text}
+                //-option(value=category.text) #{category.text}
+                option(value = category) #{category}
         //- amount
         .mb-3
           label(for="amount" class="form-label") Amount
@@ -20,26 +21,65 @@ body
         //- comment
         .mb-3
           label(for="comment" class="form-label") Comment
-          textarea(class="form-control" id="comment" name="comment" rows="3" placeholder="Add a comment...")
+          textarea(class="form-control" id="comment" name="comment" rows="3" placeholder="Add a comment..." required)
         //- dateTime
         .mb-3
           label(for="expenseDateTime" class="form-label") Event Date/Time
           .input-group.date(id="datetimepicker1" data-target-input="nearest")
-            input(type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" name="expenseDateTime" required)
+            input(type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" id= "expenseDateTime" name="expenseDateTime" required)
             .input-group-append(data-target="#datetimepicker1" data-toggle="datetimepicker")
               .input-group-text
                 i.fas.fa-calendar-alt
         //- submit button
-        .mb-3
-          button(type="submit" class="btn btn-primary") Add/Edit
-    
+        button(type="submit" class="btn btn-success" onclick="submitExpenseForm()") #{mode === 'Update' ? 'Update' : 'Add'}
+        span &nbsp;
+        button(type="submit" class="btn btn-primary" onclick="window.location.href='/'") Back to list
+
+
     //- script for date-time picker
     script.
+        const format = 'DD/MM/YYYY HH:mm'
         const picker = new tempusDominus.TempusDominus(document.getElementById('datetimepicker1'),{
             localization: {
                 'locale': 'fr'
             }
         });
         picker.dates.formatInput = function(date) {
-            return moment(date).format('DD/MM/YYYY HH:mm')
+            return moment(date).format(format)
+        }
+        if ("#{mode}" === "Update") {
+          const eventData = !{JSON.stringify(eventData || {})}.expense;
+          picker.dates.setValue(new tempusDominus.DateTime(moment(eventData.DateTime, format)));
+          
+          document.getElementById('category').value = eventData.Category || '';
+          // Update the Amount input
+          document.getElementById('amount').value = eventData.Amount || '';
+
+          // Update the Comment textarea
+          document.getElementById('comment').value = eventData.Comment || '';
+
+        }
+
+        function submitExpenseForm() {
+          const eventData  = {
+            Category: document.getElementById('category').value,
+            Amount: document.getElementById('amount').value,
+            Comment: document.getElementById('comment').value,
+            DateTime: document.getElementById('expenseDateTime').value,
+          };
+
+          const url = "#{mode}" === "Update" ? `/api/expense/${!{JSON.stringify(eventData  || {})}.id}` : '/api/expense';
+          
+          const method = "#{mode}" === "Update" ? 'put' : 'post';
+
+          axios[method](url, eventData).then(response => {
+            alert('Success!');
+            location.href = '/'
+          })
+          .catch(error => {
+            if(error.response)
+              alert(JSON.stringify(error.response.data.errors))
+            else
+              alert(error)
+          });
         }

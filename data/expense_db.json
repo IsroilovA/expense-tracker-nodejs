@@ -1,11 +1,83 @@
 [
     {
         "id": 1,
-        "expense":{
-            "Category": "Entertainment",
-            "Amount": 100000,
-            "DateTime": "12/02/2024 19:00",
+        "expense": {
+            "Category": "transportation",
+            "Amount": "2345",
+            "DateTime": "15/02/2024 19:00",
             "Comment": "Turkiston Palace"
+        }
+    },
+    {
+        "id": 2,
+        "expense": {
+            "Category": "Personal Spending",
+            "Amount": "2345",
+            "DateTime": "15/02/2024 19:00",
+            "Comment": "Turkiston Palace"
+        }
+    },
+    {
+        "id": 3,
+        "expense": {
+            "Category": "utilities",
+            "Amount": 2345,
+            "DateTime": "15/02/2024 19:00",
+            "Comment": "Turkiston Palace"
+        }
+    },
+    {
+        "id": "qRZw",
+        "expense": {
+            "Category": "utilities",
+            "Amount": "124",
+            "Comment": "asfsaf",
+            "DateTime": "10/03/2024 18:22"
+        }
+    },
+    {
+        "id": "Vaoh",
+        "expense": {
+            "Category": "healthcare",
+            "Amount": "124",
+            "Comment": "sqfr",
+            "DateTime": "03/03/2024 18:28"
+        }
+    },
+    {
+        "id": "7Dbr",
+        "expense": {
+            "Category": "dining_out",
+            "Amount": "124",
+            "Comment": "fghjk",
+            "DateTime": "03/03/2024 18:29"
+        }
+    },
+    {
+        "id": "Ix18",
+        "expense": {
+            "Category": "miscellaneous",
+            "Amount": "124",
+            "Comment": "124124",
+            "DateTime": "07/03/2024 18:32"
+        }
+    },
+    {
+        "id": "23sr",
+        "expense": {
+            "Category": "personal_spending",
+            "Amount": "24",
+            "Comment": "fas",
+            "DateTime": "06/05/2024 18:33"
+        }
+    },
+    {
+        "id": "8Fcp",
+        "expense": {
+            "Category": "Personal Spending",
+            "Amount": "124",
+            "Comment": "fsafasfa",
+            "DateTime": "24/03/2024 18:39"
         }
     }
 ]
