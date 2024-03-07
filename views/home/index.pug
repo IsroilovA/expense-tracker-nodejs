@@ -8,25 +8,34 @@ body
             th(scope="col") ID
             th(scope="col") Category
             th(scope="col") Amount
-            th(scope="col") Event DateTime
+            th(scope="col") DateTime
             th(scope="col") Comment
             th(scope="col") Actions
         tbody
-          tr
-            td 1
-            td Leisure
-            td 345678907
-            td 2024-02-17 10:00
-            td hfjksahfkasfas
-            td
-              button.btn.btn-primary.btn-sm Edit
-              button.btn.btn-danger.btn-sm Delete
-          tr
-            td 1
-            td Sport
-            td 34567890567
-            td 2024-02-17 10:00
-            td dfghjkl;
-            td
-              button.btn.btn-primary.btn-sm Edit
-              button.btn.btn-danger.btn-sm Delete
+script.
+      document.addEventListener('DOMContentLoaded', function() {
+        axios.get('/api/expense')
+          .then(function(response) {
+            const expenses = response.data;
+            const tableBody = document.querySelector('table tbody');
+            expenses.forEach(exp => {
+              const row = document.createElement('tr');
+              const expense = exp.expense
+              row.innerHTML = `
+                <td>${exp.id}</td>
+                <td>${expense.Category}</td>
+                <td>${expense.Amount}</td>
+                <td>${expense.DateTime}</td>
+                <td>${expense.Comment}</td>
+                <td>
+                  <button class="btn btn-primary btn-sm">Edit</button>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+              `;
+              tableBody.appendChild(row);
+            });
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      });

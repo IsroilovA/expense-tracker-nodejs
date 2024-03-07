@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "id": 1,
+        "expense":{
+            "Category": "Entertainment",
+            "Amount": 100000,
+            "DateTime": "12/02/2024 19:00",
+            "Comment": "Turkiston Palace"
+        }
+    }
+]

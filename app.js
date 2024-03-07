@@ -9,7 +9,7 @@ const path = require('path')
 
 
 // make database available globally
-global.expense_db = path.join(__dirname, '.data/expense_db.json');
+global.expense_db = path.join(__dirname, './data/expense_db.json');
 
 // for web routing
 const web_route = require('./routes/web/home')
