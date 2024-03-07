@@ -1,0 +1,45 @@
+//- variable to store categories
+- var expenseCategories = [{text: 'Groceries', value: 'groceries'}, {text: 'Utilities', value: 'utilities'}, {text: 'Transportation', value: 'transportation'}, {text: 'Healthcare', value: 'healthcare'}, {text: 'Entertainment', value: 'entertainment'}, {text: 'Dining Out', value: 'dining_out'}, {text: 'Education', value: 'education'}, {text: 'Gifts/Donations', value: 'gifts_donations'}, {text: 'Personal Spending', value: 'personal_spending'}, {text: 'Miscellaneous', value: 'miscellaneous'}]
+
+include ../head.pug
+body
+    .container.mt-5
+      h1 Add/Update Expense
+      form(action="/submit-expense-form" method="POST")
+        //- category
+        .mb-3
+          label(for="category" class="form-label") Category
+          select(class="form-select" id="category" name="category" required)
+            option(disabled selected) Select the Category
+            each category in expenseCategories
+                option(value=category.value) #{category.text}
+        //- amount
+        .mb-3
+          label(for="amount" class="form-label") Amount
+          input(type="number" step="0.01" class="form-control" id="amount" name="amount" required placeholder="0.00")
+        //- comment
+        .mb-3
+          label(for="comment" class="form-label") Comment
+          textarea(class="form-control" id="comment" name="comment" rows="3" placeholder="Add a comment...")
+        //- dateTime
+        .mb-3
+          label(for="expenseDateTime" class="form-label") Event Date/Time
+          .input-group.date(id="datetimepicker1" data-target-input="nearest")
+            input(type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" name="expenseDateTime" required)
+            .input-group-append(data-target="#datetimepicker1" data-toggle="datetimepicker")
+              .input-group-text
+                i.fas.fa-calendar-alt
+        //- submit button
+        .mb-3
+          button(type="submit" class="btn btn-primary") Add/Edit
+    
+    //- script for date-time picker
+    script.
+        const picker = new tempusDominus.TempusDominus(document.getElementById('datetimepicker1'),{
+            localization: {
+                'locale': 'fr'
+            }
+        });
+        picker.dates.formatInput = function(date) {
+            return moment(date).format('DD/MM/YYYY HH:mm')
+        }
