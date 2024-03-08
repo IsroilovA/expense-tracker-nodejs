@@ -2,7 +2,7 @@
     {
         "id": 1,
         "expense": {
-            "Category": "transportation",
+            "Category": "Transportation",
             "Amount": "2345",
             "DateTime": "15/02/2024 19:00",
             "Comment": "Turkiston Palace"
@@ -20,8 +20,8 @@
     {
         "id": 3,
         "expense": {
-            "Category": "utilities",
-            "Amount": 2345,
+            "Category": "Utilities",
+            "Amount": "2345",
             "DateTime": "15/02/2024 19:00",
             "Comment": "Turkiston Palace"
         }
@@ -29,7 +29,7 @@
     {
         "id": "qRZw",
         "expense": {
-            "Category": "utilities",
+            "Category": "Dining Out",
             "Amount": "124",
             "Comment": "asfsaf",
             "DateTime": "10/03/2024 18:22"
@@ -38,7 +38,7 @@
     {
         "id": "Vaoh",
         "expense": {
-            "Category": "healthcare",
+            "Category": "Education",
             "Amount": "124",
             "Comment": "sqfr",
             "DateTime": "03/03/2024 18:28"
@@ -47,7 +47,7 @@
     {
         "id": "7Dbr",
         "expense": {
-            "Category": "dining_out",
+            "Category": "Education",
             "Amount": "124",
             "Comment": "fghjk",
             "DateTime": "03/03/2024 18:29"
@@ -56,7 +56,7 @@
     {
         "id": "Ix18",
         "expense": {
-            "Category": "miscellaneous",
+            "Category": "Miscellaneous",
             "Amount": "124",
             "Comment": "124124",
             "DateTime": "07/03/2024 18:32"
@@ -65,7 +65,7 @@
     {
         "id": "23sr",
         "expense": {
-            "Category": "personal_spending",
+            "Category": "Personal Spending",
             "Amount": "24",
             "Comment": "fas",
             "DateTime": "06/05/2024 18:33"
@@ -78,6 +78,33 @@
             "Amount": "124",
             "Comment": "fsafasfa",
             "DateTime": "24/03/2024 18:39"
+        }
+    },
+    {
+        "id": "ROpD",
+        "expense": {
+            "Category": "Education",
+            "Amount": "200",
+            "Comment": "afasdfg\n",
+            "DateTime": "01/07/2024 17:22"
+        }
+    },
+    {
+        "id": "IAz3",
+        "expense": {
+            "Category": "Transportation",
+            "Amount": "567890",
+            "Comment": "salam",
+            "DateTime": "03/10/2024 18:22"
+        }
+    },
+    {
+        "id": "R3Z0",
+        "expense": {
+            "Category": "Miscellaneous",
+            "Amount": "56789",
+            "Comment": "how wow",
+            "DateTime": "18/03/2024 00:26"
         }
     }
 ]

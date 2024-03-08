@@ -1,5 +1,4 @@
 //- variable to store categories
-//- var expenseCategories = [{text: 'Groceries', value: 'groceries'}, {text: 'Utilities', value: 'utilities'}, {text: 'Transportation', value: 'transportation'}, {text: 'Healthcare', value: 'healthcare'}, {text: 'Entertainment', value: 'entertainment'}, {text: 'Dining Out', value: 'dining_out'}, {text: 'Education', value: 'education'}, {text: 'Gifts/Donations', value: 'gifts_donations'}, {text: 'Personal Spending', value: 'personal_spending'}, {text: 'Miscellaneous', value: 'miscellaneous'}]
 - var expenseCategories = ['Groceries', 'Utilities', 'Transportation', 'Healthcare', 'Entertainment','Dining Out', 'Education', 'Gifts/Donations', 'Personal Spending', 'Miscellaneous']
 include ../head.pug
 body
@@ -12,7 +11,6 @@ body
           select(class="form-select" id="category" name="category" required)
             option(disabled selected value="") Select the Category
             each category in expenseCategories
-                //-option(value=category.text) #{category.text}
                 option(value = category) #{category}
         //- amount
         .mb-3
