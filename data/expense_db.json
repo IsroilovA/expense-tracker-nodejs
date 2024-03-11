@@ -2,25 +2,7 @@
     {
         "id": 1,
         "expense": {
-            "Category": "Transportation",
-            "Amount": "2345",
-            "DateTime": "15/02/2024 19:00",
-            "Comment": "Turkiston Palace"
-        }
-    },
-    {
-        "id": 2,
-        "expense": {
             "Category": "Personal Spending",
-            "Amount": "2345",
-            "DateTime": "15/02/2024 19:00",
-            "Comment": "Turkiston Palace"
-        }
-    },
-    {
-        "id": 3,
-        "expense": {
-            "Category": "Utilities",
             "Amount": "2345",
             "DateTime": "15/02/2024 19:00",
             "Comment": "Turkiston Palace"
@@ -29,7 +11,7 @@
     {
         "id": "qRZw",
         "expense": {
-            "Category": "Dining Out",
+            "Category": "Gifts/Donations",
             "Amount": "124",
             "Comment": "asfsaf",
             "DateTime": "10/03/2024 18:22"
@@ -45,18 +27,9 @@
         }
     },
     {
-        "id": "7Dbr",
-        "expense": {
-            "Category": "Education",
-            "Amount": "124",
-            "Comment": "fghjk",
-            "DateTime": "03/03/2024 18:29"
-        }
-    },
-    {
         "id": "Ix18",
         "expense": {
-            "Category": "Miscellaneous",
+            "Category": "Personal Spending",
             "Amount": "124",
             "Comment": "124124",
             "DateTime": "07/03/2024 18:32"
@@ -65,7 +38,7 @@
     {
         "id": "23sr",
         "expense": {
-            "Category": "Personal Spending",
+            "Category": "Miscellaneous",
             "Amount": "24",
             "Comment": "fas",
             "DateTime": "06/05/2024 18:33"
@@ -85,7 +58,7 @@
         "expense": {
             "Category": "Education",
             "Amount": "200",
-            "Comment": "afasdfg\n",
+            "Comment": "fgsadgasgasgasgas",
             "DateTime": "01/07/2024 17:22"
         }
     },
@@ -104,7 +77,61 @@
             "Category": "Miscellaneous",
             "Amount": "56789",
             "Comment": "how wow",
-            "DateTime": "18/03/2024 00:26"
+            "DateTime": "03/03/2024 00:26"
+        }
+    },
+    {
+        "id": "dTsO",
+        "expense": {
+            "Category": "Groceries",
+            "Amount": "555",
+            "Comment": "hshjfiop",
+            "DateTime": "03/03/2024 11:44"
+        }
+    },
+    {
+        "id": "htuH",
+        "expense": {
+            "Category": "Utilities",
+            "Amount": "24",
+            "Comment": "asfr",
+            "DateTime": "17/03/2024 12:12"
+        }
+    },
+    {
+        "id": "YcbI",
+        "expense": {
+            "Category": "Miscellaneous",
+            "Amount": "24",
+            "Comment": "asfr",
+            "DateTime": "17/03/2024 12:12"
+        }
+    },
+    {
+        "id": "nfig",
+        "expense": {
+            "Category": "Miscellaneous",
+            "Amount": "24",
+            "Comment": "asfr",
+            "DateTime": "17/03/2024 12:12"
+        }
+    },
+    {
+        "id": "xusj",
+        "expense": {
+            "Category": "Utilities",
+            "Amount": "124",
+            "Comment": "xdfghjkl;'",
+            "DateTime": "13/03/2024 12:30"
+        }
+    },
+    {
+        "id": "nsjD",
+        "expense": {
+            "Category": "Healthcare",
+            "Amount": "1456",
+            "Comment": "sdfghjkl",
+            "DateTime": "03/07/2024 17:22"
         }
     }
 ]

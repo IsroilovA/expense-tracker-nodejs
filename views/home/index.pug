@@ -1,7 +1,11 @@
 include ../head.pug
 body
     .container.mt-5
-      h1 All expences
+      .row.d-flex.align-items-center
+        .col-md-6 
+          h1 All expences
+        .col-md-6.text-end
+          a.btn.btn-success(href='/add', role="button") Addç
       table.table.table-responsive.table-hover.table-striped.table-dark
         thead
           tr
