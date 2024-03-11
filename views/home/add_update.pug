@@ -7,7 +7,7 @@ body
       //- submit
       .mb-3
           label(for="category" class="form-label") Category
-          select(class="form-select" id="category" name="category" required)
+          select(class="form-select mb-3" id="category" name="category" required)
             option(disabled selected value="") Select the Category
             each category in expenseCategories
                 option(value = category) #{category}
@@ -31,9 +31,7 @@ body
       button(type="submit" class="btn btn-success" onclick="submitExpenseForm()") #{mode === 'Update' ? 'Update' : 'Add'}
       span &nbsp;
       button(type="submit" class="btn btn-primary" onclick="window.location.href='/'") Back to list
-        
-
-
+    
     //- script for date-time picker
     script.
         const format = 'DD/MM/YYYY HH:mm'

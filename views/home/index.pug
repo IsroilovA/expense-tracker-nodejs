@@ -5,8 +5,8 @@ body
         .col-md-6 
           h1 All expences
         .col-md-6.text-end
-          a.btn.btn-success(href='/add', role="button") Addç
-      table.table.table-responsive.table-hover.table-striped.table-dark
+          a.btn.btn-success(href='/add', role="button") Add
+      table.table.table-responsive.table-hover.table-striped.table-success.table-bordered
         thead
           tr
             th(scope="col") ID
@@ -25,10 +25,11 @@ script.
             expenses.forEach(exp => {
               const row = document.createElement('tr');
               const expense = exp.expense
+              //Int1NUmberFormat is used to format amount as UZS currency
               row.innerHTML = `
                 <td>${exp.id}</td>
                 <td>${expense.Category}</td>
-                <td>${expense.Amount}</td>
+                <td>${Intl.NumberFormat('en-US', { style: 'currency', currency: 'UZS' }).format(expense.Amount)}</td>
                 <td>${expense.DateTime}</td>
                 <td>${expense.Comment}</td>
                 <td>

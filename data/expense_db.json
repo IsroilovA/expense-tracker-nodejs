@@ -1,137 +1,20 @@
 [
     {
-        "id": 1,
-        "expense": {
-            "Category": "Personal Spending",
-            "Amount": "2345",
-            "DateTime": "15/02/2024 19:00",
-            "Comment": "Turkiston Palace"
-        }
-    },
-    {
-        "id": "qRZw",
-        "expense": {
-            "Category": "Gifts/Donations",
-            "Amount": "124",
-            "Comment": "asfsaf",
-            "DateTime": "10/03/2024 18:22"
-        }
-    },
-    {
-        "id": "Vaoh",
-        "expense": {
-            "Category": "Education",
-            "Amount": "124",
-            "Comment": "sqfr",
-            "DateTime": "03/03/2024 18:28"
-        }
-    },
-    {
-        "id": "Ix18",
-        "expense": {
-            "Category": "Personal Spending",
-            "Amount": "124",
-            "Comment": "124124",
-            "DateTime": "07/03/2024 18:32"
-        }
-    },
-    {
-        "id": "23sr",
-        "expense": {
-            "Category": "Miscellaneous",
-            "Amount": "24",
-            "Comment": "fas",
-            "DateTime": "06/05/2024 18:33"
-        }
-    },
-    {
-        "id": "8Fcp",
-        "expense": {
-            "Category": "Personal Spending",
-            "Amount": "124",
-            "Comment": "fsafasfa",
-            "DateTime": "24/03/2024 18:39"
-        }
-    },
-    {
-        "id": "ROpD",
-        "expense": {
-            "Category": "Education",
-            "Amount": "200",
-            "Comment": "fgsadgasgasgasgas",
-            "DateTime": "01/07/2024 17:22"
-        }
-    },
-    {
-        "id": "IAz3",
-        "expense": {
-            "Category": "Transportation",
-            "Amount": "567890",
-            "Comment": "salam",
-            "DateTime": "03/10/2024 18:22"
-        }
-    },
-    {
-        "id": "R3Z0",
-        "expense": {
-            "Category": "Miscellaneous",
-            "Amount": "56789",
-            "Comment": "how wow",
-            "DateTime": "03/03/2024 00:26"
-        }
-    },
-    {
-        "id": "dTsO",
+        "id": "KEjV",
         "expense": {
             "Category": "Groceries",
-            "Amount": "555",
-            "Comment": "hshjfiop",
-            "DateTime": "03/03/2024 11:44"
+            "Amount": "200000",
+            "Comment": "",
+            "DateTime": "03/03/2024 00:49"
         }
     },
     {
-        "id": "htuH",
+        "id": "CuX7",
         "expense": {
-            "Category": "Utilities",
-            "Amount": "24",
-            "Comment": "asfr",
-            "DateTime": "17/03/2024 12:12"
-        }
-    },
-    {
-        "id": "YcbI",
-        "expense": {
-            "Category": "Miscellaneous",
-            "Amount": "24",
-            "Comment": "asfr",
-            "DateTime": "17/03/2024 12:12"
-        }
-    },
-    {
-        "id": "nfig",
-        "expense": {
-            "Category": "Miscellaneous",
-            "Amount": "24",
-            "Comment": "asfr",
-            "DateTime": "17/03/2024 12:12"
-        }
-    },
-    {
-        "id": "xusj",
-        "expense": {
-            "Category": "Utilities",
-            "Amount": "124",
-            "Comment": "xdfghjkl;'",
-            "DateTime": "13/03/2024 12:30"
-        }
-    },
-    {
-        "id": "nsjD",
-        "expense": {
-            "Category": "Healthcare",
-            "Amount": "1456",
-            "Comment": "sdfghjkl",
-            "DateTime": "03/07/2024 17:22"
+            "Category": "Education",
+            "Amount": "2345",
+            "Comment": "qwerrqw",
+            "DateTime": "10/03/2024 00:54"
         }
     }
 ]
