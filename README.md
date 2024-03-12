@@ -34,7 +34,6 @@ npm i express express-validator pug body-parser nodemon
 ```
 npm start
 ```
-If you have set up nodemon for development, you can also use npm run dev to start the server with hot reload.
 
 5. View the Application:
 Open your browser and navigate to http://localhost:3000 to see the application running.
