@@ -2,15 +2,15 @@
 
 ## About the app
 
-Expense tracker is a simple web appliction for writing down your expenses and incomes to improve the financial literacy
+The Expense Tracker is a straightforward web application designed to help users monitor their financial activities by conveniently tracking expenses and incomes. It aims to enhance financial literacy by providing a user-friendly platform for managing personal finances.
 
 ## How to run app lically
 
 ### Presequisites
 
 Ensure you have the following installed:
-- Node.js
-- npm
+- Node.js (Visit Node.js to download and install)
+- npm (Comes with Node.js installation)
 
 ### Step by Step Instructions (Use Terminal)
 
@@ -34,19 +34,20 @@ npm i express express-validator pug body-parser nodemon
 ```
 npm start
 ```
+If you have set up nodemon for development, you can also use npm run dev to start the server with hot reload.
 
-5. Open your browser and navigate to http://localhost:3000 to see the application running.
+5. View the Application:
+Open your browser and navigate to http://localhost:3000 to see the application running.
 
 ## Application Dependencies
 
-Dependencies application relies on:
+List of key dependencies the application relies on:
 
-i -
-express.js - for setting up the server
-express-validator - for validating user input
-pug - for building the user interface
-body-parser
-nodemon
+- express.js: Framework for setting up the server.
+- express-validator: Middleware for validating user input.
+- pug: Template engine for building the user interface.
+- body-parser: Middleware for parsing incoming request bodies.
+- nodemon: Utility that monitors for any changes in your source and automatically restarts your server (ideal for development).
 
 ## Links
 GitHub Repository: https://github.com/IsroilovA/expense-tracker-nodejs.git  
