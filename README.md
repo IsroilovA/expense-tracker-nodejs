@@ -49,5 +49,4 @@ body-parser
 nodemon
 
 ## Links
-GitHub Repository: https://github.com/IsroilovA/expense-tracker-nodejs.git
-Live Demo:
+GitHub Repository: https://github.com/IsroilovA/expense-tracker-nodejs.git  Live Demo:
