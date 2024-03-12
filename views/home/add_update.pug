@@ -4,7 +4,14 @@ include ../head.pug
 body
     .container.mt-5
       h1 #{mode}
-      //- submit
+      //- category
+      .mb-3
+          label(for="recordType" class="form-label") Category
+          select(class="form-select mb-3" id="recordType" name="recordType" required)
+            option(disabled selected value="") Select the Type
+            option(value = "Income") Income
+            option(value = "Expense") Expense
+      //- category
       .mb-3
           label(for="category" class="form-label") Category
           select(class="form-select mb-3" id="category" name="category" required)
@@ -46,11 +53,12 @@ body
         if ("#{mode}" === "Update") {
           const eventData = !{JSON.stringify(eventData || {})}.expense;
           picker.dates.setValue(new tempusDominus.DateTime(moment(eventData.DateTime, format)));
-          
+          // update the category
+          document.getElementById('recordType').value = eventData.RecordType || '';
+          // update the category
           document.getElementById('category').value = eventData.Category || '';
           // Update the Amount input
           document.getElementById('amount').value = eventData.Amount || '';
-
           // Update the Comment textarea
           document.getElementById('comment').value = eventData.Comment || '';
 
@@ -58,8 +66,9 @@ body
 
         function submitExpenseForm() {
           const eventData  = {
+            RecordType: document.getElementById('recordType').value,
             Category: document.getElementById('category').value,
-            Amount: document.getElementById('amount').value,
+            Amount: parseFloat(document.getElementById('amount').value),
             Comment: document.getElementById('comment').value,
             DateTime: document.getElementById('expenseDateTime').value,
           };

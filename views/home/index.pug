@@ -4,31 +4,42 @@ body
       p.text-uppercase.fs-3 This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service
       .row.d-flex.align-items-center
         .col-md-6 
-          h1 All expences
+          h1 All expenses
         .col-md-6.text-end
           a.btn.btn-success(href='/add', role="button") Add
       table.table.table-responsive.table-hover.table-striped.table-success.table-bordered
         thead
           tr
             th(scope="col") ID
+            th(scope="col") Type
             th(scope="col") Category
             th(scope="col") Amount
             th(scope="col") DateTime
             th(scope="col") Comment
             th(scope="col") Actions
         tbody
+      span.badge.text-bg-danger.text-wrap.fs-4.float-end
+      p.badge.text-bg-primary.text-wrap.font-monospace.fs-6.float-end Money available: 
 script.
       document.addEventListener('DOMContentLoaded', function() {
         axios.get('/api/expense')
           .then(function(response) {
+            //variable to hold money amount
+            let moneyAvailable = 0
             const expenses = response.data;
             const tableBody = document.querySelector('table tbody');
             expenses.forEach(exp => {
               const row = document.createElement('tr');
               const expense = exp.expense
+              if(expense.RecordType == "Income"){
+                moneyAvailable = parseFloat(moneyAvailable) + parseFloat(expense.Amount);  
+              }else{
+                moneyAvailable = moneyAvailable - expense.Amount;
+              }
               //Int1NUmberFormat is used to format amount as UZS currency
               row.innerHTML = `
                 <td>${exp.id}</td>
+                <td>${expense.RecordType}</td>
                 <td>${expense.Category}</td>
                 <td>${Intl.NumberFormat('en-US', { style: 'currency', currency: 'UZS' }).format(expense.Amount)}</td>
                 <td>${expense.DateTime}</td>
@@ -40,6 +51,8 @@ script.
               `;
               tableBody.appendChild(row);
             });
+            const amountSpan = document.querySelector('span');
+            amountSpan.innerHTML = Intl.NumberFormat('en-US', { style: 'currency', currency: 'UZS' }).format(moneyAvailable)
           })
           .catch(function(error) {
             console.log(error);

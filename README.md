@@ -1,2 +1,5 @@
-# expense-tracker-nodejs
-Ordinary expense tracker application written in nodejs
+# Expense Tracker Web Application
+
+## About the app
+
+Expense tracker is a simple web appliction for writing down your expenses

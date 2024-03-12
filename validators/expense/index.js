@@ -3,6 +3,8 @@ const expense_service = require('../../services/expense');
 
 const addExpenseValidation = () => {
   return [
+    body('RecordType')
+      .notEmpty().withMessage('Type cannot be empty'),
     body('Category')
       .notEmpty().withMessage('Category cannot be empty'),
     body('DateTime')
@@ -27,6 +29,8 @@ const deleteExpenseValidation = () => {
   
   const updateExpenseValidation = () => {
     return [
+      body('RecordType')
+        .notEmpty().withMessage('Type cannot be empty'),
       body('Category')
         .notEmpty().withMessage('Category'),
       body('DateTime')

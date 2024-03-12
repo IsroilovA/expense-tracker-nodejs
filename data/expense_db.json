@@ -2,8 +2,9 @@
     {
         "id": "KEjV",
         "expense": {
+            "RecordType": "Income",
             "Category": "Groceries",
-            "Amount": "200000",
+            "Amount": 200000,
             "Comment": "",
             "DateTime": "03/03/2024 00:49"
         }
@@ -11,10 +12,41 @@
     {
         "id": "CuX7",
         "expense": {
+            "RecordType": "Expense",
             "Category": "Education",
-            "Amount": "2345",
+            "Amount": 2345,
             "Comment": "qwerrqw",
             "DateTime": "10/03/2024 00:54"
+        }
+    },
+    {
+        "id": "ziWs",
+        "expense": {
+            "RecordType": "Income",
+            "Category": "Personal Spending",
+            "Amount": "5000",
+            "Comment": "how are you",
+            "DateTime": "03/03/2024 11:38"
+        }
+    },
+    {
+        "id": "PpJc",
+        "expense": {
+            "RecordType": "Income",
+            "Category": "Groceries",
+            "Amount": 5000.9,
+            "Comment": "go",
+            "DateTime": "17/03/2024 11:40"
+        }
+    },
+    {
+        "id": "CwcK",
+        "expense": {
+            "RecordType": "Expense",
+            "Category": "Miscellaneous",
+            "Amount": 100000,
+            "Comment": "fasgasga",
+            "DateTime": "03/03/2024 12:16"
         }
     }
 ]
