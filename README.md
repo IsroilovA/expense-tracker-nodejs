@@ -50,4 +50,4 @@ List of key dependencies the application relies on:
 
 ## Links
 GitHub Repository: https://github.com/IsroilovA/expense-tracker-nodejs.git  
-Live Demo:
+Live Demo: http://16.171.137.237:3000/
