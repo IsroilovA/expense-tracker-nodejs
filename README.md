@@ -21,7 +21,7 @@ git clone https://github.com/IsroilovA/expense-tracker-nodejs.git
 
 2. Navigate to the project directory:
 ```
-cd repository-name
+cd expense-tracker-nodejs
 ```
 
 3. Install dependencies:
